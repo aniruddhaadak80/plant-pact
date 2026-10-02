@@ -1,0 +1,5180 @@
+{
+  "generatedAt": "2026-10-02T08:08:40.884Z",
+  "description": "Real Open-Meteo 14-day forecasts plus ERA5 reanalysis normals for 24 cities, used to fit the Plant Pact survival model. Regenerate with scripts/fetch-training-corpus.ts.",
+  "forecastSource": {
+    "name": "Open-Meteo Forecast API",
+    "url": "https://open-meteo.com/",
+    "endpoint": "https://api.open-meteo.com/v1/forecast"
+  },
+  "archiveSource": {
+    "name": "Open-Meteo Archive API (ERA5 reanalysis)",
+    "url": "https://open-meteo.com/en/docs/historical-weather-api",
+    "endpoint": "https://archive-api.open-meteo.com/v1/archive",
+    "window": {
+      "start": "2025-09-21",
+      "end": "2026-09-10"
+    }
+  },
+  "cities": [
+    {
+      "label": "Reykjavik, Iceland",
+      "latitude": 64.1466,
+      "longitude": -21.9426,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 8,
+          "maxC": 10,
+          "meanC": 9,
+          "precipitationProbabilityMax": 98
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 7.9,
+          "maxC": 10.5,
+          "meanC": 9.2,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 5,
+          "maxC": 9.7,
+          "meanC": 7.35,
+          "precipitationProbabilityMax": 95
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 1.6,
+          "maxC": 6.4,
+          "meanC": 4,
+          "precipitationProbabilityMax": 52
+        },
+        {
+          "date": "2026-10-06",
+          "minC": -3,
+          "maxC": 6.4,
+          "meanC": 1.7,
+          "precipitationProbabilityMax": 55
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 2.4,
+          "maxC": 8.4,
+          "meanC": 5.4,
+          "precipitationProbabilityMax": 47
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 5.1,
+          "maxC": 6,
+          "meanC": 5.55,
+          "precipitationProbabilityMax": 80
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 5.2,
+          "maxC": 8.6,
+          "meanC": 6.9,
+          "precipitationProbabilityMax": 67
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 4.3,
+          "maxC": 7.7,
+          "meanC": 6,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 2.3,
+          "maxC": 7,
+          "meanC": 4.65,
+          "precipitationProbabilityMax": 44
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 3.4,
+          "maxC": 6.5,
+          "meanC": 4.95,
+          "precipitationProbabilityMax": 58
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 4,
+          "maxC": 7.8,
+          "meanC": 5.9,
+          "precipitationProbabilityMax": 59
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 4.3,
+          "maxC": 8,
+          "meanC": 6.15,
+          "precipitationProbabilityMax": 53
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 3.3,
+          "maxC": 4.9,
+          "meanC": 4.1,
+          "precipitationProbabilityMax": 57
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -0.01,
+          "minC": -7.9,
+          "maxC": 7.8,
+          "frostDays": 20,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": -1.53,
+          "minC": -10.6,
+          "maxC": 6.1,
+          "frostDays": 22,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 0.05,
+          "minC": -8.5,
+          "maxC": 6.8,
+          "frostDays": 25,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 3.95,
+          "minC": -7.2,
+          "maxC": 12,
+          "frostDays": 12,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 6.35,
+          "minC": -1.7,
+          "maxC": 14.4,
+          "frostDays": 5,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 10.21,
+          "minC": 5.2,
+          "maxC": 15.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 10.8,
+          "minC": 5.6,
+          "maxC": 16.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 10.42,
+          "minC": 2.6,
+          "maxC": 16.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 8.92,
+          "minC": 2.1,
+          "maxC": 14.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 4.74,
+          "minC": -9.6,
+          "maxC": 11.9,
+          "frostDays": 8,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 0.88,
+          "minC": -11,
+          "maxC": 7.3,
+          "frostDays": 17,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 2.96,
+          "minC": -5.6,
+          "maxC": 9.6,
+          "frostDays": 13,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Tromso, Norway",
+      "latitude": 69.6496,
+      "longitude": 18.956,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 6.5,
+          "maxC": 13.3,
+          "meanC": 9.9,
+          "precipitationProbabilityMax": 66
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 9.5,
+          "maxC": 12.8,
+          "meanC": 11.15,
+          "precipitationProbabilityMax": 67
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 8.7,
+          "maxC": 10.8,
+          "meanC": 9.75,
+          "precipitationProbabilityMax": 88
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 7.1,
+          "maxC": 10.3,
+          "meanC": 8.7,
+          "precipitationProbabilityMax": 86
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 5.9,
+          "maxC": 7.5,
+          "meanC": 6.7,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 4.5,
+          "maxC": 6.3,
+          "meanC": 5.4,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 0.8,
+          "maxC": 5.8,
+          "meanC": 3.3,
+          "precipitationProbabilityMax": 77
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 0.4,
+          "maxC": 5.5,
+          "meanC": 2.95,
+          "precipitationProbabilityMax": 65
+        },
+        {
+          "date": "2026-10-10",
+          "minC": -0.8,
+          "maxC": 2.8,
+          "meanC": 1,
+          "precipitationProbabilityMax": 50
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 0.3,
+          "maxC": 3.8,
+          "meanC": 2.05,
+          "precipitationProbabilityMax": 57
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 2.1,
+          "maxC": 4.8,
+          "meanC": 3.45,
+          "precipitationProbabilityMax": 57
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 3.4,
+          "maxC": 6.1,
+          "meanC": 4.75,
+          "precipitationProbabilityMax": 49
+        },
+        {
+          "date": "2026-10-14",
+          "minC": -1.4,
+          "maxC": 4.5,
+          "meanC": 1.55,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-15",
+          "minC": -0.6,
+          "maxC": 4,
+          "meanC": 1.7,
+          "precipitationProbabilityMax": 0
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -10.19,
+          "minC": -17.5,
+          "maxC": 2.1,
+          "frostDays": 31,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": -6.92,
+          "minC": -16.1,
+          "maxC": 1.7,
+          "frostDays": 28,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 1.15,
+          "minC": -12.2,
+          "maxC": 5.8,
+          "frostDays": 20,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 2.39,
+          "minC": -7.7,
+          "maxC": 12.7,
+          "frostDays": 20,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 6.91,
+          "minC": -3.5,
+          "maxC": 17.5,
+          "frostDays": 8,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 12.99,
+          "minC": 4.2,
+          "maxC": 24.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 12.55,
+          "minC": 5,
+          "maxC": 21.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 11.78,
+          "minC": 4.6,
+          "maxC": 20.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 8.96,
+          "minC": 1.8,
+          "maxC": 15.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 3.82,
+          "minC": -6.8,
+          "maxC": 13.8,
+          "frostDays": 8,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": -2.32,
+          "minC": -12.9,
+          "maxC": 6.3,
+          "frostDays": 26,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": -3.35,
+          "minC": -14.9,
+          "maxC": 5.8,
+          "frostDays": 27,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "London, United Kingdom",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 13.1,
+          "maxC": 19.9,
+          "meanC": 16.5,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 14.2,
+          "maxC": 20.2,
+          "meanC": 17.2,
+          "precipitationProbabilityMax": 20
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 13.2,
+          "maxC": 20.8,
+          "meanC": 17,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 15,
+          "maxC": 21.5,
+          "meanC": 18.25,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 14.4,
+          "maxC": 19,
+          "meanC": 16.7,
+          "precipitationProbabilityMax": 17
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 11.1,
+          "maxC": 14.7,
+          "meanC": 12.9,
+          "precipitationProbabilityMax": 43
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 9,
+          "maxC": 14.3,
+          "meanC": 11.65,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 8,
+          "maxC": 16,
+          "meanC": 12,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 10.6,
+          "maxC": 15.6,
+          "meanC": 13.1,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 9,
+          "maxC": 14.3,
+          "meanC": 11.65,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 9.5,
+          "maxC": 14.6,
+          "meanC": 12.05,
+          "precipitationProbabilityMax": 24
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 11.2,
+          "maxC": 17.1,
+          "meanC": 14.15,
+          "precipitationProbabilityMax": 22
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 13.2,
+          "maxC": 18.4,
+          "meanC": 15.8,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 13.1,
+          "maxC": 21.1,
+          "meanC": 17.1,
+          "precipitationProbabilityMax": 0
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 5.25,
+          "minC": -5.2,
+          "maxC": 11.1,
+          "frostDays": 9,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 7.98,
+          "minC": 1.3,
+          "maxC": 16.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 8.89,
+          "minC": 1.2,
+          "maxC": 17.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 12.09,
+          "minC": 3.1,
+          "maxC": 25.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 16.37,
+          "minC": 4.2,
+          "maxC": 34.5,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 19.38,
+          "minC": 9,
+          "maxC": 36,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 22.54,
+          "minC": 12.6,
+          "maxC": 34.7,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 21.08,
+          "minC": 11.4,
+          "maxC": 36.2,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 15.41,
+          "minC": 7.2,
+          "maxC": 26.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 12.31,
+          "minC": 4.9,
+          "maxC": 18.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 9.4,
+          "minC": -1.4,
+          "maxC": 17.2,
+          "frostDays": 3,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 7.73,
+          "minC": -1.3,
+          "maxC": 14.4,
+          "frostDays": 2,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Berlin, Germany",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 12.3,
+          "maxC": 17.1,
+          "meanC": 14.7,
+          "precipitationProbabilityMax": 35
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 12.5,
+          "maxC": 19.1,
+          "meanC": 15.8,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 13.8,
+          "maxC": 22.1,
+          "meanC": 17.95,
+          "precipitationProbabilityMax": 3
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 12.7,
+          "maxC": 21.3,
+          "meanC": 17,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 9.6,
+          "maxC": 21.6,
+          "meanC": 15.6,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 10.8,
+          "maxC": 15.9,
+          "meanC": 13.35,
+          "precipitationProbabilityMax": 34
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 7.8,
+          "maxC": 14.9,
+          "meanC": 11.35,
+          "precipitationProbabilityMax": 43
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 4.7,
+          "maxC": 13.9,
+          "meanC": 9.3,
+          "precipitationProbabilityMax": 35
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 9.2,
+          "maxC": 13.1,
+          "meanC": 11.15,
+          "precipitationProbabilityMax": 31
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 9.3,
+          "maxC": 15,
+          "meanC": 12.15,
+          "precipitationProbabilityMax": 25
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 10.5,
+          "maxC": 17,
+          "meanC": 13.75,
+          "precipitationProbabilityMax": 25
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 9.6,
+          "maxC": 15.4,
+          "meanC": 12.5,
+          "precipitationProbabilityMax": 31
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 10.9,
+          "maxC": 20.4,
+          "meanC": 15.65,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 9.5,
+          "maxC": 16.8,
+          "meanC": 13.15,
+          "precipitationProbabilityMax": 0
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -2.22,
+          "minC": -12.9,
+          "maxC": 6.9,
+          "frostDays": 30,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 0.81,
+          "minC": -10,
+          "maxC": 17.7,
+          "frostDays": 17,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 7.07,
+          "minC": -1.2,
+          "maxC": 16.3,
+          "frostDays": 3,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 9.38,
+          "minC": -0.8,
+          "maxC": 21.6,
+          "frostDays": 2,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 15.45,
+          "minC": 4.8,
+          "maxC": 29.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 20.85,
+          "minC": 9.6,
+          "maxC": 39.8,
+          "frostDays": 0,
+          "hotDays": 8,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 20.01,
+          "minC": 11.6,
+          "maxC": 37.9,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 20.33,
+          "minC": 11.4,
+          "maxC": 36.1,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 14.93,
+          "minC": 5.5,
+          "maxC": 26.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 10.25,
+          "minC": 0.4,
+          "maxC": 16.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 5.2,
+          "minC": -5.4,
+          "maxC": 15.1,
+          "frostDays": 7,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 3.11,
+          "minC": -9.2,
+          "maxC": 12.7,
+          "frostDays": 14,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Warsaw, Poland",
+      "latitude": 52.2297,
+      "longitude": 21.0122,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 8.9,
+          "maxC": 20.9,
+          "meanC": 14.9,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 8.2,
+          "maxC": 21,
+          "meanC": 14.6,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 11.4,
+          "maxC": 19.5,
+          "meanC": 15.45,
+          "precipitationProbabilityMax": 7
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 10.9,
+          "maxC": 18.4,
+          "meanC": 14.65,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 9.8,
+          "maxC": 18.4,
+          "meanC": 14.1,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 11.3,
+          "maxC": 19,
+          "meanC": 15.15,
+          "precipitationProbabilityMax": 7
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 10.1,
+          "maxC": 20.8,
+          "meanC": 15.45,
+          "precipitationProbabilityMax": 25
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 8.2,
+          "maxC": 13.6,
+          "meanC": 10.9,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 6.8,
+          "maxC": 13.6,
+          "meanC": 10.2,
+          "precipitationProbabilityMax": 22
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 8.5,
+          "maxC": 12.6,
+          "meanC": 10.55,
+          "precipitationProbabilityMax": 19
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 7.7,
+          "maxC": 16.7,
+          "meanC": 12.2,
+          "precipitationProbabilityMax": 20
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 8.7,
+          "maxC": 14.8,
+          "meanC": 11.75,
+          "precipitationProbabilityMax": 27
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 7.3,
+          "maxC": 17.6,
+          "meanC": 12.45,
+          "precipitationProbabilityMax": 23
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 8.1,
+          "maxC": 15.7,
+          "meanC": 11.9,
+          "precipitationProbabilityMax": 16
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -6.25,
+          "minC": -15.1,
+          "maxC": 1.6,
+          "frostDays": 30,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": -3.09,
+          "minC": -21.6,
+          "maxC": 14.8,
+          "frostDays": 22,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 7.74,
+          "minC": -1.9,
+          "maxC": 18.2,
+          "frostDays": 4,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 8.86,
+          "minC": -1.1,
+          "maxC": 20.2,
+          "frostDays": 3,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 15.63,
+          "minC": 4.2,
+          "maxC": 27.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 20.48,
+          "minC": 9.4,
+          "maxC": 38.2,
+          "frostDays": 0,
+          "hotDays": 8,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 19.31,
+          "minC": 11,
+          "maxC": 34.1,
+          "frostDays": 0,
+          "hotDays": 4,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 19.84,
+          "minC": 9.7,
+          "maxC": 36.1,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 14.75,
+          "minC": 4.5,
+          "maxC": 28.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 8.69,
+          "minC": -0.5,
+          "maxC": 17.4,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 4.1,
+          "minC": -2.9,
+          "maxC": 15.3,
+          "frostDays": 11,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 2.31,
+          "minC": -11.3,
+          "maxC": 10.6,
+          "frostDays": 13,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Toronto, Canada",
+      "latitude": 43.6532,
+      "longitude": -79.3832,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 12.6,
+          "maxC": 19.5,
+          "meanC": 16.05,
+          "precipitationProbabilityMax": 90
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 7.6,
+          "maxC": 15.3,
+          "meanC": 11.45,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 12.8,
+          "maxC": 18.7,
+          "meanC": 15.75,
+          "precipitationProbabilityMax": 1
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 10.5,
+          "maxC": 16.7,
+          "meanC": 13.6,
+          "precipitationProbabilityMax": 3
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 7,
+          "maxC": 15.9,
+          "meanC": 11.45,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 9.4,
+          "maxC": 18.4,
+          "meanC": 13.9,
+          "precipitationProbabilityMax": 1
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 15.7,
+          "maxC": 23,
+          "meanC": 19.35,
+          "precipitationProbabilityMax": 9
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 14.8,
+          "maxC": 21.6,
+          "meanC": 18.2,
+          "precipitationProbabilityMax": 11
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 9.8,
+          "maxC": 16.9,
+          "meanC": 13.35,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 14.2,
+          "maxC": 23.7,
+          "meanC": 18.95,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 17.7,
+          "maxC": 23.2,
+          "meanC": 20.45,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 15.2,
+          "maxC": 19,
+          "meanC": 17.1,
+          "precipitationProbabilityMax": 28
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 9.8,
+          "maxC": 19.5,
+          "meanC": 14.65,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 11.8,
+          "maxC": 21.8,
+          "meanC": 16.8,
+          "precipitationProbabilityMax": 10
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -6.43,
+          "minC": -25,
+          "maxC": 13.2,
+          "frostDays": 28,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": -5.56,
+          "minC": -22.7,
+          "maxC": 4.9,
+          "frostDays": 26,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 1.27,
+          "minC": -20.9,
+          "maxC": 16.7,
+          "frostDays": 21,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 7.27,
+          "minC": -5.4,
+          "maxC": 22.1,
+          "frostDays": 6,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 12.64,
+          "minC": 0,
+          "maxC": 27.8,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 19.98,
+          "minC": 9.4,
+          "maxC": 32.1,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 23.25,
+          "minC": 13,
+          "maxC": 36.9,
+          "frostDays": 0,
+          "hotDays": 7,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 21.19,
+          "minC": 12.4,
+          "maxC": 28.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 19.73,
+          "minC": 11.9,
+          "maxC": 26.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 11.91,
+          "minC": 0.4,
+          "maxC": 25.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 3.72,
+          "minC": -4.7,
+          "maxC": 13.2,
+          "frostDays": 9,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": -3.04,
+          "minC": -13.9,
+          "maxC": 8.9,
+          "frostDays": 30,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Chicago, United States",
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 12.5,
+          "maxC": 16.9,
+          "meanC": 14.7,
+          "precipitationProbabilityMax": 93
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 10.7,
+          "maxC": 15.8,
+          "meanC": 13.25,
+          "precipitationProbabilityMax": 1
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 12.9,
+          "maxC": 22.2,
+          "meanC": 17.55,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 13.8,
+          "maxC": 18.9,
+          "meanC": 16.35,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 10.7,
+          "maxC": 19.1,
+          "meanC": 14.9,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 13.2,
+          "maxC": 23.7,
+          "meanC": 18.45,
+          "precipitationProbabilityMax": 5
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 15.5,
+          "maxC": 24.3,
+          "meanC": 19.9,
+          "precipitationProbabilityMax": 5
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 16.5,
+          "maxC": 21.1,
+          "meanC": 18.8,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 13.3,
+          "maxC": 26.4,
+          "meanC": 19.85,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 19.8,
+          "maxC": 27.4,
+          "meanC": 23.6,
+          "precipitationProbabilityMax": 13
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 18.6,
+          "maxC": 23.4,
+          "meanC": 21,
+          "precipitationProbabilityMax": 13
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 15.5,
+          "maxC": 21.1,
+          "meanC": 18.3,
+          "precipitationProbabilityMax": 23
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 12.9,
+          "maxC": 20.6,
+          "meanC": 16.75,
+          "precipitationProbabilityMax": 6
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 15,
+          "maxC": 24.6,
+          "meanC": 19.8,
+          "precipitationProbabilityMax": 6
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -5.86,
+          "minC": -23,
+          "maxC": 15.6,
+          "frostDays": 25,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 0.15,
+          "minC": -11.6,
+          "maxC": 16.6,
+          "frostDays": 22,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 5.67,
+          "minC": -10.1,
+          "maxC": 27.1,
+          "frostDays": 12,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 11.59,
+          "minC": -1.2,
+          "maxC": 26.9,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 15.33,
+          "minC": 2,
+          "maxC": 30.3,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 20.71,
+          "minC": 12.8,
+          "maxC": 34.4,
+          "frostDays": 0,
+          "hotDays": 4,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 24.47,
+          "minC": 15.3,
+          "maxC": 35.8,
+          "frostDays": 0,
+          "hotDays": 12,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 22.63,
+          "minC": 15,
+          "maxC": 30,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 22.53,
+          "minC": 14.3,
+          "maxC": 34.2,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 14.29,
+          "minC": 2.6,
+          "maxC": 30.5,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 5.8,
+          "minC": -4.6,
+          "maxC": 19.8,
+          "frostDays": 7,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": -2.6,
+          "minC": -18.8,
+          "maxC": 11.4,
+          "frostDays": 23,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "New York, United States",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 18.2,
+          "maxC": 28.8,
+          "meanC": 23.5,
+          "precipitationProbabilityMax": 25
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 15.3,
+          "maxC": 23.9,
+          "meanC": 19.6,
+          "precipitationProbabilityMax": 43
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 15.9,
+          "maxC": 19.6,
+          "meanC": 17.75,
+          "precipitationProbabilityMax": 36
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 15.9,
+          "maxC": 20.2,
+          "meanC": 18.05,
+          "precipitationProbabilityMax": 36
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 8.6,
+          "maxC": 16.4,
+          "meanC": 12.5,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 9.7,
+          "maxC": 17.7,
+          "meanC": 13.7,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 12.7,
+          "maxC": 22.1,
+          "meanC": 17.4,
+          "precipitationProbabilityMax": 1
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 15.7,
+          "maxC": 24.7,
+          "meanC": 20.2,
+          "precipitationProbabilityMax": 3
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 13.1,
+          "maxC": 19.7,
+          "meanC": 16.4,
+          "precipitationProbabilityMax": 3
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 14.5,
+          "maxC": 21.8,
+          "meanC": 18.15,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 16.2,
+          "maxC": 19.1,
+          "meanC": 17.65,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 17.5,
+          "maxC": 24.4,
+          "meanC": 20.95,
+          "precipitationProbabilityMax": 27
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 11.6,
+          "maxC": 18.8,
+          "meanC": 15.2,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 13.1,
+          "maxC": 21.5,
+          "meanC": 17.3,
+          "precipitationProbabilityMax": 13
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": -2.59,
+          "minC": -18.3,
+          "maxC": 11,
+          "frostDays": 24,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": -3.2,
+          "minC": -17.8,
+          "maxC": 8,
+          "frostDays": 25,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 6.75,
+          "minC": -9.9,
+          "maxC": 26.7,
+          "frostDays": 9,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 12.83,
+          "minC": -1.6,
+          "maxC": 33.4,
+          "frostDays": 3,
+          "hotDays": 3,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 17.77,
+          "minC": 6.7,
+          "maxC": 35.8,
+          "frostDays": 0,
+          "hotDays": 4,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 23.81,
+          "minC": 10.8,
+          "maxC": 35.4,
+          "frostDays": 0,
+          "hotDays": 10,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 25.27,
+          "minC": 16.8,
+          "maxC": 40.7,
+          "frostDays": 0,
+          "hotDays": 11,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 24.33,
+          "minC": 16.9,
+          "maxC": 35.2,
+          "frostDays": 0,
+          "hotDays": 8,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 21.85,
+          "minC": 12,
+          "maxC": 30.8,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 13.97,
+          "minC": 3.5,
+          "maxC": 29.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 7.34,
+          "minC": -0.9,
+          "maxC": 18.5,
+          "frostDays": 4,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": -0.3,
+          "minC": -11.6,
+          "maxC": 14.5,
+          "frostDays": 27,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Mexico City, Mexico",
+      "latitude": 19.4326,
+      "longitude": -99.1332,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 14,
+          "maxC": 22.3,
+          "meanC": 18.15,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 13.5,
+          "maxC": 23.2,
+          "meanC": 18.35,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 14.3,
+          "maxC": 22.6,
+          "meanC": 18.45,
+          "precipitationProbabilityMax": 90
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 14.3,
+          "maxC": 22.5,
+          "meanC": 18.4,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 14.2,
+          "maxC": 21.9,
+          "meanC": 18.05,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 13.7,
+          "maxC": 21.6,
+          "meanC": 17.65,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 14.1,
+          "maxC": 20.9,
+          "meanC": 17.5,
+          "precipitationProbabilityMax": 84
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 13.6,
+          "maxC": 17.7,
+          "meanC": 15.65,
+          "precipitationProbabilityMax": 61
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 12,
+          "maxC": 20.7,
+          "meanC": 16.35,
+          "precipitationProbabilityMax": 63
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 11.9,
+          "maxC": 21.7,
+          "meanC": 16.8,
+          "precipitationProbabilityMax": 62
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 12.4,
+          "maxC": 21.6,
+          "meanC": 17,
+          "precipitationProbabilityMax": 53
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 13.6,
+          "maxC": 22.5,
+          "meanC": 18.05,
+          "precipitationProbabilityMax": 59
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 14.5,
+          "maxC": 21.8,
+          "meanC": 18.15,
+          "precipitationProbabilityMax": 69
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 14.1,
+          "maxC": 22.2,
+          "meanC": 18.15,
+          "precipitationProbabilityMax": 74
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 15.01,
+          "minC": 5,
+          "maxC": 25.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 17,
+          "minC": 3.1,
+          "maxC": 29.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 16.84,
+          "minC": 7.7,
+          "maxC": 26.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 19.56,
+          "minC": 7.8,
+          "maxC": 32.7,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 20.21,
+          "minC": 11.8,
+          "maxC": 31.5,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 17.86,
+          "minC": 12,
+          "maxC": 28,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 17.74,
+          "minC": 12,
+          "maxC": 28.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 17.55,
+          "minC": 12.1,
+          "maxC": 27.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 17.07,
+          "minC": 12.2,
+          "maxC": 26.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 16.92,
+          "minC": 8.6,
+          "maxC": 27.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 16.43,
+          "minC": 7.1,
+          "maxC": 26,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 14.95,
+          "minC": 6,
+          "maxC": 23.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Bogota, Colombia",
+      "latitude": 4.711,
+      "longitude": -74.0721,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 11.5,
+          "maxC": 18.7,
+          "meanC": 15.1,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 11.7,
+          "maxC": 19.5,
+          "meanC": 15.6,
+          "precipitationProbabilityMax": 83
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 11.2,
+          "maxC": 22.4,
+          "meanC": 16.8,
+          "precipitationProbabilityMax": 54
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 9.7,
+          "maxC": 24.1,
+          "meanC": 16.9,
+          "precipitationProbabilityMax": 71
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 11.7,
+          "maxC": 22,
+          "meanC": 16.85,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 11.6,
+          "maxC": 18.6,
+          "meanC": 15.1,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 12.3,
+          "maxC": 18.9,
+          "meanC": 15.6,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 12.4,
+          "maxC": 20.4,
+          "meanC": 16.4,
+          "precipitationProbabilityMax": 95
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 12.2,
+          "maxC": 20.7,
+          "meanC": 16.45,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 12.5,
+          "maxC": 18.1,
+          "meanC": 15.3,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 12.8,
+          "maxC": 16.6,
+          "meanC": 14.7,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 13.3,
+          "maxC": 15.9,
+          "meanC": 14.6,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 11.5,
+          "maxC": 16.1,
+          "meanC": 13.8,
+          "precipitationProbabilityMax": 98
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 12.4,
+          "maxC": 17.9,
+          "meanC": 15.15,
+          "precipitationProbabilityMax": 98
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 14.34,
+          "minC": 8.8,
+          "maxC": 22.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 14.37,
+          "minC": 6.3,
+          "maxC": 22.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 14.75,
+          "minC": 8,
+          "maxC": 23.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 14.31,
+          "minC": 8.6,
+          "maxC": 21.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 15,
+          "minC": 6.6,
+          "maxC": 23.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 14.98,
+          "minC": 8.5,
+          "maxC": 21.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 14.72,
+          "minC": 8.3,
+          "maxC": 20.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 15.48,
+          "minC": 9.5,
+          "maxC": 23.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 14.7,
+          "minC": 7.1,
+          "maxC": 21.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 13.85,
+          "minC": 7.8,
+          "maxC": 20.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 14.45,
+          "minC": 7.7,
+          "maxC": 22.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 13.98,
+          "minC": 6,
+          "maxC": 22.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Sao Paulo, Brazil",
+      "latitude": -23.5505,
+      "longitude": -46.6333,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 15,
+          "maxC": 19.1,
+          "meanC": 17.05,
+          "precipitationProbabilityMax": 72
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 14.9,
+          "maxC": 23.4,
+          "meanC": 19.15,
+          "precipitationProbabilityMax": 99
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 16.7,
+          "maxC": 25.2,
+          "meanC": 20.95,
+          "precipitationProbabilityMax": 95
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 18.5,
+          "maxC": 27.6,
+          "meanC": 23.05,
+          "precipitationProbabilityMax": 86
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 17,
+          "maxC": 24.3,
+          "meanC": 20.65,
+          "precipitationProbabilityMax": 71
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 16.3,
+          "maxC": 23.9,
+          "meanC": 20.1,
+          "precipitationProbabilityMax": 63
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 16.8,
+          "maxC": 29.2,
+          "meanC": 23,
+          "precipitationProbabilityMax": 55
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 18.2,
+          "maxC": 30.8,
+          "meanC": 24.5,
+          "precipitationProbabilityMax": 56
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 19.2,
+          "maxC": 29.9,
+          "meanC": 24.55,
+          "precipitationProbabilityMax": 71
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 19.8,
+          "maxC": 25.3,
+          "meanC": 22.55,
+          "precipitationProbabilityMax": 69
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 15.8,
+          "maxC": 20.7,
+          "meanC": 18.25,
+          "precipitationProbabilityMax": 52
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 13.5,
+          "maxC": 21.1,
+          "meanC": 17.3,
+          "precipitationProbabilityMax": 60
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 15.8,
+          "maxC": 20.7,
+          "meanC": 18.25,
+          "precipitationProbabilityMax": 71
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 16.9,
+          "maxC": 21.8,
+          "meanC": 19.35,
+          "precipitationProbabilityMax": 71
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 21.85,
+          "minC": 14.9,
+          "maxC": 33.8,
+          "frostDays": 0,
+          "hotDays": 4,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 22.54,
+          "minC": 16.1,
+          "maxC": 33.6,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 21.83,
+          "minC": 15,
+          "maxC": 31.7,
+          "frostDays": 0,
+          "hotDays": 7,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 21.29,
+          "minC": 14.2,
+          "maxC": 29.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 18.16,
+          "minC": 8.4,
+          "maxC": 28.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 16.38,
+          "minC": 9.2,
+          "maxC": 26,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 17.55,
+          "minC": 8.9,
+          "maxC": 29.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 20.08,
+          "minC": 12.5,
+          "maxC": 31.8,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 17.89,
+          "minC": 10,
+          "maxC": 33,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 19.31,
+          "minC": 9.5,
+          "maxC": 33.8,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 20.23,
+          "minC": 12,
+          "maxC": 34,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 23.68,
+          "minC": 14.6,
+          "maxC": 35.1,
+          "frostDays": 0,
+          "hotDays": 14,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Ushuaia, Argentina",
+      "latitude": -54.8019,
+      "longitude": -68.303,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 3.3,
+          "maxC": 6.8,
+          "meanC": 5.05,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 3.2,
+          "maxC": 5.6,
+          "meanC": 4.4,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 3.9,
+          "maxC": 6.4,
+          "meanC": 5.15,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 3.8,
+          "maxC": 6.2,
+          "meanC": 5,
+          "precipitationProbabilityMax": 51
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 2.4,
+          "maxC": 6.8,
+          "meanC": 4.6,
+          "precipitationProbabilityMax": 12
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 3,
+          "maxC": 9.8,
+          "meanC": 6.4,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 1.2,
+          "maxC": 9.5,
+          "meanC": 5.35,
+          "precipitationProbabilityMax": 10
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 2.5,
+          "maxC": 9.9,
+          "meanC": 6.2,
+          "precipitationProbabilityMax": 6
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 3.8,
+          "maxC": 12.9,
+          "meanC": 8.35,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 5.8,
+          "maxC": 9.5,
+          "meanC": 7.65,
+          "precipitationProbabilityMax": 10
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 4.6,
+          "maxC": 12.2,
+          "meanC": 8.4,
+          "precipitationProbabilityMax": 13
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 5.9,
+          "maxC": 12.7,
+          "meanC": 9.3,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 6,
+          "maxC": 13,
+          "meanC": 9.5,
+          "precipitationProbabilityMax": 23
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 5.2,
+          "maxC": 13.9,
+          "meanC": 9.55,
+          "precipitationProbabilityMax": 23
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 9.69,
+          "minC": 2.6,
+          "maxC": 21.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 8.67,
+          "minC": 1.9,
+          "maxC": 17.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 7.6,
+          "minC": -0.1,
+          "maxC": 18.3,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 5.57,
+          "minC": -0.8,
+          "maxC": 14.7,
+          "frostDays": 2,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 3.54,
+          "minC": -4.9,
+          "maxC": 10.9,
+          "frostDays": 8,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 2.53,
+          "minC": -4.3,
+          "maxC": 8.8,
+          "frostDays": 17,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": -1.31,
+          "minC": -12.4,
+          "maxC": 7.3,
+          "frostDays": 29,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 1.8,
+          "minC": -6,
+          "maxC": 7.5,
+          "frostDays": 16,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 2.47,
+          "minC": -6.1,
+          "maxC": 11.6,
+          "frostDays": 11,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 5.26,
+          "minC": -3.6,
+          "maxC": 15.9,
+          "frostDays": 8,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 6.33,
+          "minC": 1.2,
+          "maxC": 15.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 7.35,
+          "minC": 1.2,
+          "maxC": 16.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Lagos, Nigeria",
+      "latitude": 6.5244,
+      "longitude": 3.3792,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 24.9,
+          "maxC": 29.1,
+          "meanC": 27,
+          "precipitationProbabilityMax": 57
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 24.1,
+          "maxC": 28.4,
+          "meanC": 26.25,
+          "precipitationProbabilityMax": 96
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 24.9,
+          "maxC": 27.7,
+          "meanC": 26.3,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 23.7,
+          "maxC": 28.5,
+          "meanC": 26.1,
+          "precipitationProbabilityMax": 87
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 23.9,
+          "maxC": 27.9,
+          "meanC": 25.9,
+          "precipitationProbabilityMax": 96
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 24.5,
+          "maxC": 27.5,
+          "meanC": 26,
+          "precipitationProbabilityMax": 98
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 24.7,
+          "maxC": 27.4,
+          "meanC": 26.05,
+          "precipitationProbabilityMax": 89
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 25,
+          "maxC": 28.2,
+          "meanC": 26.6,
+          "precipitationProbabilityMax": 84
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 25.3,
+          "maxC": 28.5,
+          "meanC": 26.9,
+          "precipitationProbabilityMax": 93
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 24.8,
+          "maxC": 28.5,
+          "meanC": 26.65,
+          "precipitationProbabilityMax": 93
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 25.3,
+          "maxC": 27.8,
+          "meanC": 26.55,
+          "precipitationProbabilityMax": 96
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 25,
+          "maxC": 28.3,
+          "meanC": 26.65,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 25.1,
+          "maxC": 27.7,
+          "meanC": 26.4,
+          "precipitationProbabilityMax": 85
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 24.8,
+          "maxC": 29.2,
+          "meanC": 27,
+          "precipitationProbabilityMax": 42
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 28.12,
+          "minC": 24.2,
+          "maxC": 34.1,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 28.36,
+          "minC": 23.9,
+          "maxC": 33.3,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 28.88,
+          "minC": 23.9,
+          "maxC": 33.6,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 28.58,
+          "minC": 23.9,
+          "maxC": 33.2,
+          "frostDays": 0,
+          "hotDays": 28,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 28.09,
+          "minC": 24.3,
+          "maxC": 32.4,
+          "frostDays": 0,
+          "hotDays": 24,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 26.94,
+          "minC": 23.6,
+          "maxC": 31.6,
+          "frostDays": 0,
+          "hotDays": 7,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 26.16,
+          "minC": 23.6,
+          "maxC": 29,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 26.01,
+          "minC": 24,
+          "maxC": 28.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 26.19,
+          "minC": 23.6,
+          "maxC": 30,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 26.56,
+          "minC": 23.2,
+          "maxC": 31.3,
+          "frostDays": 0,
+          "hotDays": 10,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 27.4,
+          "minC": 23.2,
+          "maxC": 31.8,
+          "frostDays": 0,
+          "hotDays": 25,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 27.78,
+          "minC": 24,
+          "maxC": 32.1,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Nairobi, Kenya",
+      "latitude": -1.2921,
+      "longitude": 36.8219,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 14.4,
+          "maxC": 28.8,
+          "meanC": 21.6,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 15.3,
+          "maxC": 29,
+          "meanC": 22.15,
+          "precipitationProbabilityMax": 9
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 15.6,
+          "maxC": 27.6,
+          "meanC": 21.6,
+          "precipitationProbabilityMax": 60
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 16,
+          "maxC": 27.4,
+          "meanC": 21.7,
+          "precipitationProbabilityMax": 98
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 15.8,
+          "maxC": 25.1,
+          "meanC": 20.45,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 16,
+          "maxC": 24.5,
+          "meanC": 20.25,
+          "precipitationProbabilityMax": 99
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 16.1,
+          "maxC": 24,
+          "meanC": 20.05,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 16,
+          "maxC": 21.4,
+          "meanC": 18.7,
+          "precipitationProbabilityMax": 95
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 15.8,
+          "maxC": 22.1,
+          "meanC": 18.95,
+          "precipitationProbabilityMax": 86
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 15.4,
+          "maxC": 23.7,
+          "meanC": 19.55,
+          "precipitationProbabilityMax": 82
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 15.7,
+          "maxC": 24.1,
+          "meanC": 19.9,
+          "precipitationProbabilityMax": 74
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 15.8,
+          "maxC": 22.5,
+          "meanC": 19.15,
+          "precipitationProbabilityMax": 73
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 15.7,
+          "maxC": 21.8,
+          "meanC": 18.75,
+          "precipitationProbabilityMax": 67
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 15.9,
+          "maxC": 23.7,
+          "meanC": 19.8,
+          "precipitationProbabilityMax": 23
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 21.16,
+          "minC": 13.7,
+          "maxC": 31.3,
+          "frostDays": 0,
+          "hotDays": 2,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 21.01,
+          "minC": 15,
+          "maxC": 30,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 19.02,
+          "minC": 14.5,
+          "maxC": 26.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 19.06,
+          "minC": 14.1,
+          "maxC": 27,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 19.15,
+          "minC": 14.3,
+          "maxC": 25.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 18.36,
+          "minC": 10.6,
+          "maxC": 26.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 18.21,
+          "minC": 11.6,
+          "maxC": 26.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 18.54,
+          "minC": 11.1,
+          "maxC": 27.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 19.54,
+          "minC": 12.1,
+          "maxC": 29.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 19.69,
+          "minC": 12.8,
+          "maxC": 29.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 19.18,
+          "minC": 13.1,
+          "maxC": 26.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 19.72,
+          "minC": 13.6,
+          "maxC": 29.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Cairo, Egypt",
+      "latitude": 30.0444,
+      "longitude": 31.2357,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 21.5,
+          "maxC": 30.9,
+          "meanC": 26.2,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 20.3,
+          "maxC": 30.1,
+          "meanC": 25.2,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 19.2,
+          "maxC": 29.8,
+          "meanC": 24.5,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 18.2,
+          "maxC": 29.3,
+          "meanC": 23.75,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 19.2,
+          "maxC": 29.4,
+          "meanC": 24.3,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 18.7,
+          "maxC": 29.8,
+          "meanC": 24.25,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 18.8,
+          "maxC": 30.3,
+          "meanC": 24.55,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 19.9,
+          "maxC": 30.8,
+          "meanC": 25.35,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 19.7,
+          "maxC": 30.3,
+          "meanC": 25,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 19.2,
+          "maxC": 30.4,
+          "meanC": 24.8,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 21.4,
+          "maxC": 32.1,
+          "meanC": 26.75,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 21.3,
+          "maxC": 31.6,
+          "meanC": 26.45,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 21.3,
+          "maxC": 31.4,
+          "meanC": 26.35,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 21.3,
+          "maxC": 31.7,
+          "meanC": 26.5,
+          "precipitationProbabilityMax": 3
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 16.09,
+          "minC": 6.8,
+          "maxC": 27.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 18.55,
+          "minC": 9.8,
+          "maxC": 30.8,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 17.94,
+          "minC": 8.3,
+          "maxC": 29.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 22.65,
+          "minC": 13.8,
+          "maxC": 37.8,
+          "frostDays": 0,
+          "hotDays": 9,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 25.98,
+          "minC": 13.8,
+          "maxC": 41.3,
+          "frostDays": 0,
+          "hotDays": 25,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 29.94,
+          "minC": 21.1,
+          "maxC": 39.6,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 31.28,
+          "minC": 22,
+          "maxC": 43.1,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 31.39,
+          "minC": 22.6,
+          "maxC": 41.1,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 28.77,
+          "minC": 20.3,
+          "maxC": 38.5,
+          "frostDays": 0,
+          "hotDays": 20,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 25.49,
+          "minC": 17.4,
+          "maxC": 36.7,
+          "frostDays": 0,
+          "hotDays": 23,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 22.47,
+          "minC": 13.7,
+          "maxC": 34.3,
+          "frostDays": 0,
+          "hotDays": 9,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 17.15,
+          "minC": 9.4,
+          "maxC": 26.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Dubai, United Arab Emirates",
+      "latitude": 25.2048,
+      "longitude": 55.2708,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 29,
+          "maxC": 39.3,
+          "meanC": 34.15,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 28.6,
+          "maxC": 38.3,
+          "meanC": 33.45,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 29.3,
+          "maxC": 37,
+          "meanC": 33.15,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 28.7,
+          "maxC": 35.1,
+          "meanC": 31.9,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 28.5,
+          "maxC": 34.9,
+          "meanC": 31.7,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 27.3,
+          "maxC": 38.5,
+          "meanC": 32.9,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 28,
+          "maxC": 37.2,
+          "meanC": 32.6,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 27.6,
+          "maxC": 36,
+          "meanC": 31.8,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 27.2,
+          "maxC": 34.5,
+          "meanC": 30.85,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 26.9,
+          "maxC": 33.7,
+          "meanC": 30.3,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 26.8,
+          "maxC": 34.1,
+          "meanC": 30.45,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 27.8,
+          "maxC": 36.4,
+          "meanC": 32.1,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 27.3,
+          "maxC": 36,
+          "meanC": 31.65,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 26.8,
+          "maxC": 34.4,
+          "meanC": 30.6,
+          "precipitationProbabilityMax": 0
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 19.86,
+          "minC": 13.3,
+          "maxC": 27.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 22.06,
+          "minC": 13.4,
+          "maxC": 31.2,
+          "frostDays": 0,
+          "hotDays": 4,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 24.23,
+          "minC": 17.1,
+          "maxC": 35.4,
+          "frostDays": 0,
+          "hotDays": 9,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 25.66,
+          "minC": 17.6,
+          "maxC": 37.6,
+          "frostDays": 0,
+          "hotDays": 11,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 30.65,
+          "minC": 23.5,
+          "maxC": 39,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 33.32,
+          "minC": 26.6,
+          "maxC": 42.2,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 35.08,
+          "minC": 29.1,
+          "maxC": 45.2,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 36.53,
+          "minC": 28.6,
+          "maxC": 45.9,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 33.92,
+          "minC": 26.9,
+          "maxC": 41.4,
+          "frostDays": 0,
+          "hotDays": 20,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 30.15,
+          "minC": 22.6,
+          "maxC": 38.7,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 25.61,
+          "minC": 17,
+          "maxC": 34,
+          "frostDays": 0,
+          "hotDays": 23,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 22.13,
+          "minC": 12.7,
+          "maxC": 31.5,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Kathmandu, Nepal",
+      "latitude": 27.7172,
+      "longitude": 85.324,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 18.3,
+          "maxC": 25,
+          "meanC": 21.65,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 17,
+          "maxC": 25.3,
+          "meanC": 21.15,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 16.8,
+          "maxC": 24.8,
+          "meanC": 20.8,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 15.7,
+          "maxC": 23.6,
+          "meanC": 19.65,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 14.3,
+          "maxC": 24.1,
+          "meanC": 19.2,
+          "precipitationProbabilityMax": 96
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 14.3,
+          "maxC": 24.1,
+          "meanC": 19.2,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 14.1,
+          "maxC": 25,
+          "meanC": 19.55,
+          "precipitationProbabilityMax": 88
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 14.9,
+          "maxC": 24.9,
+          "meanC": 19.9,
+          "precipitationProbabilityMax": 88
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 13.9,
+          "maxC": 22.3,
+          "meanC": 18.1,
+          "precipitationProbabilityMax": 98
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 14.7,
+          "maxC": 25,
+          "meanC": 19.85,
+          "precipitationProbabilityMax": 84
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 15.5,
+          "maxC": 25.2,
+          "meanC": 20.35,
+          "precipitationProbabilityMax": 69
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 15,
+          "maxC": 25.7,
+          "meanC": 20.35,
+          "precipitationProbabilityMax": 57
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 14.9,
+          "maxC": 25.6,
+          "meanC": 20.25,
+          "precipitationProbabilityMax": 62
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 13.2,
+          "maxC": 24.8,
+          "meanC": 19,
+          "precipitationProbabilityMax": 58
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 10.76,
+          "minC": 1.9,
+          "maxC": 19.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 14.16,
+          "minC": 4.2,
+          "maxC": 23.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 16.42,
+          "minC": 8.8,
+          "maxC": 25.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 19.06,
+          "minC": 9.7,
+          "maxC": 29.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 19.86,
+          "minC": 13.3,
+          "maxC": 27.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 22.79,
+          "minC": 17.1,
+          "maxC": 29.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 23.29,
+          "minC": 19.6,
+          "maxC": 29,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 23.13,
+          "minC": 19.1,
+          "maxC": 29.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 21.99,
+          "minC": 17.4,
+          "maxC": 28.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 19.32,
+          "minC": 13.6,
+          "maxC": 26.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 15.12,
+          "minC": 6,
+          "maxC": 23.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 11.7,
+          "minC": 3.3,
+          "maxC": 20.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Jaipur, India",
+      "latitude": 26.9124,
+      "longitude": 75.7873,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 24.3,
+          "maxC": 34.1,
+          "meanC": 29.2,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 24.3,
+          "maxC": 35.4,
+          "meanC": 29.85,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 24.4,
+          "maxC": 35.3,
+          "meanC": 29.85,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 23.9,
+          "maxC": 34.7,
+          "meanC": 29.3,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 24.4,
+          "maxC": 34.3,
+          "meanC": 29.35,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 24.2,
+          "maxC": 34.9,
+          "meanC": 29.55,
+          "precipitationProbabilityMax": 3
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 24.5,
+          "maxC": 34.3,
+          "meanC": 29.4,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 23.8,
+          "maxC": 34.1,
+          "meanC": 28.95,
+          "precipitationProbabilityMax": 2
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 23.9,
+          "maxC": 33.7,
+          "meanC": 28.8,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 23.2,
+          "maxC": 34.1,
+          "meanC": 28.65,
+          "precipitationProbabilityMax": 12
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 23.4,
+          "maxC": 34.4,
+          "meanC": 28.9,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 23.1,
+          "maxC": 34.3,
+          "meanC": 28.7,
+          "precipitationProbabilityMax": 6
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 22.5,
+          "maxC": 34.4,
+          "meanC": 28.45,
+          "precipitationProbabilityMax": 10
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 22.7,
+          "maxC": 34.9,
+          "meanC": 28.8,
+          "precipitationProbabilityMax": 6
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 14.1,
+          "minC": 5.6,
+          "maxC": 25,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 19.69,
+          "minC": 10.2,
+          "maxC": 31.3,
+          "frostDays": 0,
+          "hotDays": 3,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 25.89,
+          "minC": 15.1,
+          "maxC": 36.2,
+          "frostDays": 0,
+          "hotDays": 26,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 29.83,
+          "minC": 16.7,
+          "maxC": 42.1,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 33.51,
+          "minC": 22,
+          "maxC": 43.7,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 31.96,
+          "minC": 21.9,
+          "maxC": 41,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 29.87,
+          "minC": 24.4,
+          "maxC": 37.2,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 28.28,
+          "minC": 23.9,
+          "maxC": 33.2,
+          "frostDays": 0,
+          "hotDays": 29,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 28.62,
+          "minC": 23.9,
+          "maxC": 35.7,
+          "frostDays": 0,
+          "hotDays": 18,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 24.08,
+          "minC": 18,
+          "maxC": 31.6,
+          "frostDays": 0,
+          "hotDays": 16,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 19.08,
+          "minC": 11.4,
+          "maxC": 29.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 17.35,
+          "minC": 8.3,
+          "maxC": 27.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Bengaluru, India",
+      "latitude": 12.9716,
+      "longitude": 77.5946,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 20,
+          "maxC": 28.7,
+          "meanC": 24.35,
+          "precipitationProbabilityMax": 4
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 19.7,
+          "maxC": 29.2,
+          "meanC": 24.45,
+          "precipitationProbabilityMax": 10
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 19.9,
+          "maxC": 30.1,
+          "meanC": 25,
+          "precipitationProbabilityMax": 79
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 19.3,
+          "maxC": 28.2,
+          "meanC": 23.75,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 19.3,
+          "maxC": 28.2,
+          "meanC": 23.75,
+          "precipitationProbabilityMax": 100
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 19.9,
+          "maxC": 27.8,
+          "meanC": 23.85,
+          "precipitationProbabilityMax": 68
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 19.7,
+          "maxC": 27.4,
+          "meanC": 23.55,
+          "precipitationProbabilityMax": 87
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 18.5,
+          "maxC": 27.6,
+          "meanC": 23.05,
+          "precipitationProbabilityMax": 89
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 18.8,
+          "maxC": 28.3,
+          "meanC": 23.55,
+          "precipitationProbabilityMax": 65
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 19.7,
+          "maxC": 28.4,
+          "meanC": 24.05,
+          "precipitationProbabilityMax": 47
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 19.8,
+          "maxC": 28.4,
+          "meanC": 24.1,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 19.2,
+          "maxC": 28.8,
+          "meanC": 24,
+          "precipitationProbabilityMax": 47
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 19.5,
+          "maxC": 29,
+          "meanC": 24.25,
+          "precipitationProbabilityMax": 45
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 19.6,
+          "maxC": 28.6,
+          "meanC": 24.1,
+          "precipitationProbabilityMax": 40
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 21.01,
+          "minC": 13.9,
+          "maxC": 29.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 23.3,
+          "minC": 13.2,
+          "maxC": 32.1,
+          "frostDays": 0,
+          "hotDays": 10,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 26.26,
+          "minC": 17.7,
+          "maxC": 34.8,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 28.84,
+          "minC": 19.9,
+          "maxC": 36.9,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 26.28,
+          "minC": 20.6,
+          "maxC": 34.1,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 24.17,
+          "minC": 19.7,
+          "maxC": 30.9,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 24.09,
+          "minC": 19.6,
+          "maxC": 32.1,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 23.44,
+          "minC": 19.3,
+          "maxC": 30.7,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 23.83,
+          "minC": 17.9,
+          "maxC": 31,
+          "frostDays": 0,
+          "hotDays": 7,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 22.61,
+          "minC": 17.9,
+          "maxC": 29.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 21.84,
+          "minC": 15.8,
+          "maxC": 28.8,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 20.55,
+          "minC": 13.8,
+          "maxC": 28.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Singapore",
+      "latitude": 1.3521,
+      "longitude": 103.8198,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 24.1,
+          "maxC": 32.3,
+          "meanC": 28.2,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 23.2,
+          "maxC": 30.4,
+          "meanC": 26.8,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 24.4,
+          "maxC": 31.1,
+          "meanC": 27.75,
+          "precipitationProbabilityMax": 75
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 24.1,
+          "maxC": 31.6,
+          "meanC": 27.85,
+          "precipitationProbabilityMax": 71
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 23.9,
+          "maxC": 32.4,
+          "meanC": 28.15,
+          "precipitationProbabilityMax": 47
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 23.3,
+          "maxC": 30.9,
+          "meanC": 27.1,
+          "precipitationProbabilityMax": 69
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 23.8,
+          "maxC": 30.6,
+          "meanC": 27.2,
+          "precipitationProbabilityMax": 42
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 23.7,
+          "maxC": 32.5,
+          "meanC": 28.1,
+          "precipitationProbabilityMax": 49
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 23.4,
+          "maxC": 31.1,
+          "meanC": 27.25,
+          "precipitationProbabilityMax": 86
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 23.5,
+          "maxC": 27.8,
+          "meanC": 25.65,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 24,
+          "maxC": 29.5,
+          "meanC": 26.75,
+          "precipitationProbabilityMax": 80
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 24.1,
+          "maxC": 31.6,
+          "meanC": 27.85,
+          "precipitationProbabilityMax": 82
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 23.9,
+          "maxC": 31.4,
+          "meanC": 27.65,
+          "precipitationProbabilityMax": 90
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 24.3,
+          "maxC": 33.3,
+          "meanC": 28.8,
+          "precipitationProbabilityMax": 61
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 26.05,
+          "minC": 21.9,
+          "maxC": 32.2,
+          "frostDays": 0,
+          "hotDays": 26,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 26.11,
+          "minC": 21.6,
+          "maxC": 33,
+          "frostDays": 0,
+          "hotDays": 23,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 27.06,
+          "minC": 21.4,
+          "maxC": 33.6,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 27.16,
+          "minC": 23,
+          "maxC": 33.8,
+          "frostDays": 0,
+          "hotDays": 29,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 26.91,
+          "minC": 23,
+          "maxC": 33.3,
+          "frostDays": 0,
+          "hotDays": 26,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 27.36,
+          "minC": 22.9,
+          "maxC": 33.4,
+          "frostDays": 0,
+          "hotDays": 26,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 27.46,
+          "minC": 23.3,
+          "maxC": 32.8,
+          "frostDays": 0,
+          "hotDays": 26,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 28.21,
+          "minC": 22.9,
+          "maxC": 33.7,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 27.99,
+          "minC": 23.1,
+          "maxC": 33,
+          "frostDays": 0,
+          "hotDays": 20,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 27.21,
+          "minC": 21.8,
+          "maxC": 33.6,
+          "frostDays": 0,
+          "hotDays": 29,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 26.76,
+          "minC": 22.8,
+          "maxC": 33.6,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 25.9,
+          "minC": 22,
+          "maxC": 33.1,
+          "frostDays": 0,
+          "hotDays": 22,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Bangkok, Thailand",
+      "latitude": 13.7563,
+      "longitude": 100.5018,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 26.5,
+          "maxC": 34.3,
+          "meanC": 30.4,
+          "precipitationProbabilityMax": 86
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 26,
+          "maxC": 31.4,
+          "meanC": 28.7,
+          "precipitationProbabilityMax": 92
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 25.5,
+          "maxC": 32.2,
+          "meanC": 28.85,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 23.3,
+          "maxC": 32.1,
+          "meanC": 27.7,
+          "precipitationProbabilityMax": 88
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 23.5,
+          "maxC": 30.6,
+          "meanC": 27.05,
+          "precipitationProbabilityMax": 91
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 23.8,
+          "maxC": 31,
+          "meanC": 27.4,
+          "precipitationProbabilityMax": 68
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 24.3,
+          "maxC": 30.2,
+          "meanC": 27.25,
+          "precipitationProbabilityMax": 61
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 25.3,
+          "maxC": 31.8,
+          "meanC": 28.55,
+          "precipitationProbabilityMax": 37
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 23.7,
+          "maxC": 31,
+          "meanC": 27.35,
+          "precipitationProbabilityMax": 45
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 23.5,
+          "maxC": 27.8,
+          "meanC": 25.65,
+          "precipitationProbabilityMax": 57
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 23.6,
+          "maxC": 30.3,
+          "meanC": 26.95,
+          "precipitationProbabilityMax": 67
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 23.3,
+          "maxC": 31.1,
+          "meanC": 27.2,
+          "precipitationProbabilityMax": 68
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 23.8,
+          "maxC": 30.1,
+          "meanC": 26.95,
+          "precipitationProbabilityMax": 61
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 23.8,
+          "maxC": 30.2,
+          "meanC": 27,
+          "precipitationProbabilityMax": 48
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 27.19,
+          "minC": 18.4,
+          "maxC": 35.1,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 29.22,
+          "minC": 22.5,
+          "maxC": 36.1,
+          "frostDays": 0,
+          "hotDays": 28,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 30.24,
+          "minC": 22.1,
+          "maxC": 37,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 31.49,
+          "minC": 25.6,
+          "maxC": 38.4,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 30.28,
+          "minC": 24.9,
+          "maxC": 36.7,
+          "frostDays": 0,
+          "hotDays": 31,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 29.44,
+          "minC": 24.8,
+          "maxC": 35.7,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 28.86,
+          "minC": 24.2,
+          "maxC": 36.7,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 28.26,
+          "minC": 25,
+          "maxC": 34.7,
+          "frostDays": 0,
+          "hotDays": 30,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 28.01,
+          "minC": 24.2,
+          "maxC": 35.4,
+          "frostDays": 0,
+          "hotDays": 17,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 27.75,
+          "minC": 23.6,
+          "maxC": 33.2,
+          "frostDays": 0,
+          "hotDays": 29,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 26.04,
+          "minC": 17.5,
+          "maxC": 34.1,
+          "frostDays": 0,
+          "hotDays": 17,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 27.69,
+          "minC": 21.1,
+          "maxC": 35.1,
+          "frostDays": 0,
+          "hotDays": 27,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Tokyo, Japan",
+      "latitude": 35.6762,
+      "longitude": 139.6503,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 16.7,
+          "maxC": 21.3,
+          "meanC": 19,
+          "precipitationProbabilityMax": 97
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 15.4,
+          "maxC": 23.6,
+          "meanC": 19.5,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 17.1,
+          "maxC": 23.1,
+          "meanC": 20.1,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 16.6,
+          "maxC": 19,
+          "meanC": 17.8,
+          "precipitationProbabilityMax": 48
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 18.7,
+          "maxC": 24.1,
+          "meanC": 21.4,
+          "precipitationProbabilityMax": 33
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 14.4,
+          "maxC": 20.5,
+          "meanC": 17.45,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 15.1,
+          "maxC": 23.3,
+          "meanC": 19.2,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 15.2,
+          "maxC": 23.6,
+          "meanC": 19.4,
+          "precipitationProbabilityMax": 29
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 14.9,
+          "maxC": 22.8,
+          "meanC": 18.85,
+          "precipitationProbabilityMax": 12
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 15.3,
+          "maxC": 23.3,
+          "meanC": 19.3,
+          "precipitationProbabilityMax": 20
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 16.8,
+          "maxC": 24.6,
+          "meanC": 20.7,
+          "precipitationProbabilityMax": 12
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 16.5,
+          "maxC": 24.1,
+          "meanC": 20.3,
+          "precipitationProbabilityMax": 24
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 18.3,
+          "maxC": 23.1,
+          "meanC": 20.7,
+          "precipitationProbabilityMax": 27
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 18.9,
+          "maxC": 29.6,
+          "meanC": 24.25,
+          "precipitationProbabilityMax": 19
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 5.39,
+          "minC": -3.5,
+          "maxC": 17.6,
+          "frostDays": 11,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 7.69,
+          "minC": -3.4,
+          "maxC": 22.8,
+          "frostDays": 4,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 10.33,
+          "minC": 0.5,
+          "maxC": 20.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 15.97,
+          "minC": 6.4,
+          "maxC": 25.5,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 20.8,
+          "minC": 11.4,
+          "maxC": 32.3,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 21.44,
+          "minC": 15.1,
+          "maxC": 33.7,
+          "frostDays": 0,
+          "hotDays": 1,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 27.96,
+          "minC": 19.6,
+          "maxC": 39.1,
+          "frostDays": 0,
+          "hotDays": 22,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 27.08,
+          "minC": 19.6,
+          "maxC": 39.2,
+          "frostDays": 0,
+          "hotDays": 21,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 23.79,
+          "minC": 17,
+          "maxC": 32.2,
+          "frostDays": 0,
+          "hotDays": 5,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 18.05,
+          "minC": 7.9,
+          "maxC": 29,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 11.92,
+          "minC": 4.3,
+          "maxC": 20.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 7.61,
+          "minC": -0.4,
+          "maxC": 20.7,
+          "frostDays": 2,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Sydney, Australia",
+      "latitude": -33.8688,
+      "longitude": 151.2093,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 18.1,
+          "maxC": 23.9,
+          "meanC": 21,
+          "precipitationProbabilityMax": 93
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 13.5,
+          "maxC": 21.4,
+          "meanC": 17.45,
+          "precipitationProbabilityMax": 94
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 13.6,
+          "maxC": 23.2,
+          "meanC": 18.4,
+          "precipitationProbabilityMax": 14
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 16.5,
+          "maxC": 22.1,
+          "meanC": 19.3,
+          "precipitationProbabilityMax": 51
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 13.8,
+          "maxC": 26.2,
+          "meanC": 20,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 11.9,
+          "maxC": 17.5,
+          "meanC": 14.7,
+          "precipitationProbabilityMax": 59
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 10.5,
+          "maxC": 19.8,
+          "meanC": 15.15,
+          "precipitationProbabilityMax": 22
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 18.3,
+          "maxC": 27.6,
+          "meanC": 22.95,
+          "precipitationProbabilityMax": 12
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 15.7,
+          "maxC": 30.3,
+          "meanC": 23,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 18.1,
+          "maxC": 24.8,
+          "meanC": 21.45,
+          "precipitationProbabilityMax": 15
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 20.5,
+          "maxC": 26.2,
+          "meanC": 23.35,
+          "precipitationProbabilityMax": 35
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 15.5,
+          "maxC": 20,
+          "meanC": 17.75,
+          "precipitationProbabilityMax": 45
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 15.7,
+          "maxC": 18.2,
+          "meanC": 16.95,
+          "precipitationProbabilityMax": 41
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 16.6,
+          "maxC": 18,
+          "meanC": 17.3,
+          "precipitationProbabilityMax": 33
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 22.37,
+          "minC": 15.8,
+          "maxC": 42,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 22.95,
+          "minC": 16.7,
+          "maxC": 36.9,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 21.2,
+          "minC": 12.3,
+          "maxC": 28.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 18.28,
+          "minC": 10.4,
+          "maxC": 29.6,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 16.66,
+          "minC": 9.6,
+          "maxC": 24.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 14.22,
+          "minC": 7,
+          "maxC": 21.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 12.77,
+          "minC": 5.9,
+          "maxC": 21.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 13.55,
+          "minC": 5.9,
+          "maxC": 21.4,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 17.8,
+          "minC": 8.2,
+          "maxC": 31.7,
+          "frostDays": 0,
+          "hotDays": 2,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 20.03,
+          "minC": 12,
+          "maxC": 38.2,
+          "frostDays": 0,
+          "hotDays": 7,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 20.76,
+          "minC": 10.4,
+          "maxC": 35.1,
+          "frostDays": 0,
+          "hotDays": 6,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 21.8,
+          "minC": 13.3,
+          "maxC": 39.1,
+          "frostDays": 0,
+          "hotDays": 10,
+          "samples": 31
+        }
+      ]
+    },
+    {
+      "label": "Christchurch, New Zealand",
+      "latitude": -43.5321,
+      "longitude": 172.6362,
+      "forecast": [
+        {
+          "date": "2026-10-02",
+          "minC": 9.2,
+          "maxC": 22.4,
+          "meanC": 15.8,
+          "precipitationProbabilityMax": 84
+        },
+        {
+          "date": "2026-10-03",
+          "minC": 4.7,
+          "maxC": 12.2,
+          "meanC": 8.45,
+          "precipitationProbabilityMax": 15
+        },
+        {
+          "date": "2026-10-04",
+          "minC": 6.6,
+          "maxC": 12.1,
+          "meanC": 9.35,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-05",
+          "minC": 5.1,
+          "maxC": 16.8,
+          "meanC": 10.95,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-06",
+          "minC": 7.1,
+          "maxC": 19.1,
+          "meanC": 13.1,
+          "precipitationProbabilityMax": 0
+        },
+        {
+          "date": "2026-10-07",
+          "minC": 9.3,
+          "maxC": 19.4,
+          "meanC": 14.35,
+          "precipitationProbabilityMax": 10
+        },
+        {
+          "date": "2026-10-08",
+          "minC": 10.8,
+          "maxC": 15,
+          "meanC": 12.9,
+          "precipitationProbabilityMax": 18
+        },
+        {
+          "date": "2026-10-09",
+          "minC": 10.3,
+          "maxC": 18.4,
+          "meanC": 14.35,
+          "precipitationProbabilityMax": 13
+        },
+        {
+          "date": "2026-10-10",
+          "minC": 15.5,
+          "maxC": 20.1,
+          "meanC": 17.8,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-11",
+          "minC": 7.2,
+          "maxC": 20.6,
+          "meanC": 13.9,
+          "precipitationProbabilityMax": 8
+        },
+        {
+          "date": "2026-10-12",
+          "minC": 9.5,
+          "maxC": 20.1,
+          "meanC": 14.8,
+          "precipitationProbabilityMax": 13
+        },
+        {
+          "date": "2026-10-13",
+          "minC": 12.3,
+          "maxC": 21.7,
+          "meanC": 17,
+          "precipitationProbabilityMax": 16
+        },
+        {
+          "date": "2026-10-14",
+          "minC": 9.1,
+          "maxC": 20.1,
+          "meanC": 14.6,
+          "precipitationProbabilityMax": 26
+        },
+        {
+          "date": "2026-10-15",
+          "minC": 7.4,
+          "maxC": 12.9,
+          "meanC": 10.15,
+          "precipitationProbabilityMax": 30
+        }
+      ],
+      "normals": [
+        {
+          "month": 1,
+          "meanC": 15.95,
+          "minC": 9.2,
+          "maxC": 29.7,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 2,
+          "meanC": 15.52,
+          "minC": 7.3,
+          "maxC": 26.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 28
+        },
+        {
+          "month": 3,
+          "meanC": 14.59,
+          "minC": 5.3,
+          "maxC": 26.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 4,
+          "meanC": 13.2,
+          "minC": 5,
+          "maxC": 23.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 5,
+          "meanC": 10.95,
+          "minC": 4.6,
+          "maxC": 21.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 6,
+          "meanC": 9.41,
+          "minC": 2.4,
+          "maxC": 19.1,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 7,
+          "meanC": 8.09,
+          "minC": -0.4,
+          "maxC": 16.7,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 8,
+          "meanC": 8.91,
+          "minC": -1,
+          "maxC": 20.6,
+          "frostDays": 1,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 9,
+          "meanC": 11.15,
+          "minC": 3.1,
+          "maxC": 21.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 20
+        },
+        {
+          "month": 10,
+          "meanC": 12.59,
+          "minC": 2.4,
+          "maxC": 24.3,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        },
+        {
+          "month": 11,
+          "meanC": 15.86,
+          "minC": 6.9,
+          "maxC": 28.9,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 30
+        },
+        {
+          "month": 12,
+          "meanC": 15.99,
+          "minC": 7.7,
+          "maxC": 28.2,
+          "frostDays": 0,
+          "hotDays": 0,
+          "samples": 31
+        }
+      ]
+    }
+  ]
+}

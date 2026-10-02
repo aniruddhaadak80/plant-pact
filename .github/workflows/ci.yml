@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: typecheck, lint, test, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # Deterministic and offline: the suite runs against an embedded PGlite
+      # database and the sealed weather sample rather than the live network.
+      PLANT_PACT_OFFLINE: "1"
+      PGLITE_DIR: ":memory:"
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit and integration tests
+        run: npm run test
+
+      - name: Production build
+        run: npm run build
+
+      - name: Verify the shipped model matches its pinned digest
+        run: |
+          # The weights are generated; if someone hand-edits them the repository
+          # would claim metrics it does not achieve. Refit and fail on a diff.
+          npm run train
+          git diff --exit-code --stat -- src/lib/model/weights.ts
+
+  secrets:
+    name: secret scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - name: Fail on committed credentials or env files
+        run: |
+          if git ls-files | grep -E '\.env($|\.)' ; then
+            echo "An environment file is tracked. Remove it." && exit 1
+          fi
+          if git ls-files | grep -Ei '(id_rsa|\.pem$|credentials\.json|\.npmrc)$' ; then
+            echo "A credential-shaped file is tracked. Remove it." && exit 1
+          fi
+          echo "No tracked credential files."

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema.json",
+  "name": "plant-pact",
+  "version": "1.0.0",
+  "description": "Forecast how long a gifted houseplant survives in a specific friend's flat using live Open-Meteo weather, ERA5 climate normals and a trained survival model, then collect the real outcome 90 days later.",
+  "protocolVersion": "2025-06-18",
+  "transport": "http",
+  "endpoint": "/api/mcp",
+  "method": "POST",
+  "contentType": "application/json",
+  "auth": {
+    "type": "session-cookie",
+    "note": "Tools are scoped to the caller's anonymous HTTP-only session cookie, which is the same ownership boundary the web UI uses. There are no accounts and no API keys. A client should send the cookie it receives from GET / for subsequent calls; a client without a cookie gets its own empty session."
+  },
+  "methods": ["initialize", "tools/list", "tools/call", "ping", "resources/list"],
+  "tools": [
+    {
+      "name": "score_placement",
+      "kind": "analysis",
+      "mutating": false,
+      "description": "Run the deterministic survival model against live weather for a candidate placement. Writes nothing."
+    },
+    {
+      "name": "commit_pact",
+      "kind": "mutation",
+      "mutating": true,
+      "idempotent": true,
+      "description": "Persist a placement as a pact, score it and seal the creation event. Accepts idempotencyKey; a replayed key returns the original pact with created=false."
+    },
+    {
+      "name": "record_outcome",
+      "kind": "mutation",
+      "mutating": true,
+      "idempotent": true,
+      "description": "Record whether the plant survived, struggled or died, and close the pact."
+    },
+    {
+      "name": "delete_pact",
+      "kind": "mutation",
+      "mutating": true,
+      "destructive": true,
+      "description": "Tombstone a pact. The row stops appearing in reads but its audit chain is retained and replayable."
+    },
+    {
+      "name": "list_pacts",
+      "kind": "read",
+      "mutating": false,
+      "description": "List the calling session's pacts."
+    },
+    {
+      "name": "get_pact",
+      "kind": "read",
+      "mutating": false,
+      "description": "Read one pact with its species profile, audit events, a freshly computed verdict and the chain replay."
+    },
+    {
+      "name": "get_forecast",
+      "kind": "read",
+      "mutating": false,
+      "description": "Normalized 14-day forecast plus 12 monthly ERA5 climate normals, labelled live or sealed."
+    },
+    {
+      "name": "match_species",
+      "kind": "read",
+      "mutating": false,
+      "description": "Resolve any plant name against the GBIF Backbone Taxonomy."
+    },
+    {
+      "name": "verify_integrity",
+      "kind": "read",
+      "mutating": false,
+      "description": "Replay a pact's SHA-384 seal chain and report the first broken sequence."
+    }
+  ],
+  "example": {
+    "curl": "curl -s https://plant-pact.vercel.app/api/mcp -H 'content-type: application/json' -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'"
+  },
+  "integrity": {
+    "algorithm": "SHA-384",
+    "chainFormula": "seal_n = SHA-384( UTF-8(prevSeal) + canonicalJson(event_n) )",
+    "canonicalJson": "recursively key-sorted, array order preserved, UTF-8",
+    "genesis": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "dataSources": [
+    {
+      "name": "Open-Meteo Forecast API",
+      "url": "https://open-meteo.com/",
+      "license": "CC BY 4.0",
+      "keyRequired": false
+    },
+    {
+      "name": "Open-Meteo Archive API (ERA5 reanalysis)",
+      "url": "https://open-meteo.com/en/docs/historical-weather-api",
+      "license": "CC BY 4.0",
+      "keyRequired": false
+    },
+    {
+      "name": "GBIF Backbone Taxonomy",
+      "url": "https://www.gbif.org/",
+      "keyRequired": false
+    }
+  ],
+  "repository": "https://github.com/aniruddhaadak80/plant-pact",
+  "liveUrl": "https://plant-pact.vercel.app"
+}
