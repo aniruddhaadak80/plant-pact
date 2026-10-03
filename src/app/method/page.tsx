@@ -48,7 +48,7 @@ export default function MethodPage() {
 
       <div className="grid gap-6 lg:grid-cols-2">
         {/* ---------------- model card ---------------- */}
-        <section className="tag p-5">
+        <section className="tag min-w-0 p-5">
           <p className="label-mono">Model card</p>
           <h2 className="mt-1 text-[1.35rem]">{MODEL_CARD.family}</h2>
           <p className="mt-2 text-sm leading-relaxed text-loam-soft">{MODEL_CARD.notes}</p>
@@ -88,7 +88,7 @@ export default function MethodPage() {
         </section>
 
         {/* ---------------- pipeline ---------------- */}
-        <section className="tag p-5">
+        <section className="tag min-w-0 p-5">
           <p className="label-mono">The pipeline</p>
           <ol className="mt-3 space-y-3 text-sm leading-relaxed text-loam-soft">
             <li>
@@ -130,7 +130,7 @@ export default function MethodPage() {
       {/* ---------------- features ---------------- */}
       <section className="mt-6">
         <p className="label-mono">Features and shipped weights</p>
-        <div className="tag mt-2.5 overflow-x-auto p-4">
+        <div className="tag mt-2.5 min-w-0 overflow-x-auto p-4">
           <table className="w-full min-w-[40rem] text-left text-sm">
             <thead>
               <tr className="border-b border-edge">
@@ -181,7 +181,7 @@ export default function MethodPage() {
 
       {/* ---------------- labelling ---------------- */}
       <section className="mt-6 grid gap-6 lg:grid-cols-2">
-        <div className="tag p-5">
+        <div className="tag min-w-0 p-5">
           <p className="label-mono">The labelling procedure</p>
           <p className="mt-2 text-sm leading-relaxed text-loam-soft">
             Training labels come from a separate, hand-written risk procedure: accumulate hazard
@@ -202,7 +202,7 @@ export default function MethodPage() {
           </dl>
         </div>
 
-        <div className="tag p-5">
+        <div className="tag min-w-0 p-5">
           <p className="label-mono">Integrity</p>
           <p className="mt-2 text-sm leading-relaxed text-loam-soft">
             Every create, update, outcome and deletion appends an event to a per-pact chain. Seals
@@ -225,7 +225,7 @@ export default function MethodPage() {
 
       {/* ---------------- data + limits ---------------- */}
       <section className="mt-6 grid gap-6 lg:grid-cols-2">
-        <div className="tag p-5">
+        <div className="tag min-w-0 p-5">
           <p className="label-mono">Data provenance</p>
           <dl className="mt-2">
             <Row term="forecast">
@@ -255,7 +255,7 @@ export default function MethodPage() {
           </p>
         </div>
 
-        <div className="tag p-5">
+        <div className="tag min-w-0 p-5">
           <p className="label-mono">Ownership, limits and safety</p>
           <ul className="mt-2 space-y-2 text-sm leading-relaxed text-loam-soft">
             <li>

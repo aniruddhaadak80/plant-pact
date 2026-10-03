@@ -139,7 +139,7 @@ export function PactActions({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="min-w-0 space-y-4">
       {committed ? (
         <div
           className="rounded-[3px] border border-leaf/40 bg-leaf-wash px-4 py-3"

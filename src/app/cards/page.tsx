@@ -53,7 +53,7 @@ export default async function CardsPage() {
           action={<CtaLink href="/advisor">Place a plant</CtaLink>}
         />
       ) : (
-        <ul className="space-y-4">
+        <ul className="min-w-0 space-y-4">
           {cards.map(({ pact, verdict, sky }) => {
             const failing = verdict?.breakingPoint.projectedDate ?? verdict?.breakingPoint.date;
             return (

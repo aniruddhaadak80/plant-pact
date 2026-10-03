@@ -1,0 +1,42 @@
+Fix the mobile layout, the hydration mismatch and the stale-build deploys
+
+Found by running the live verifier and the Playwright journey against the
+production deployment rather than against the local embedded store.
+
+Correctness:
+- PATCH /api/pacts/[id] never validated its body, so an out-of-range value
+  reached the database and surfaced as a 500. Added parsePlacementPatch with
+  range and enum checks, and it now rejects unknown fields and an empty patch
+  instead of silently ignoring them.
+- A non-object JSON-RPC payload was treated as a notification and answered
+  with 202. It now gets -32600, which is what the spec requires.
+- The care card claimed provenance but never named the seal algorithm. It now
+  states the SHA-384 chain and the head seal.
+
+Hydration:
+- /agent rendered window.location.origin during SSR, so the client rendered a
+  different string and React threw a hydration mismatch. The origin is resolved
+  on the server and passed in.
+- The footer linked to /api/mcp, which speaks POST only, so Next prefetched it
+  as a GET and every page with a pact logged a 405. It now links to /agent.
+
+Mobile:
+- Grid and flex children default to min-width:auto, so the wide audit tables
+  and long unbroken hex digests pushed the whole page wider than a 390px
+  viewport on /method, /verify and /pacts/[id]. Added min-w-0 on the affected
+  children and overflow-wrap:anywhere on mono values. Verified with a layout
+  probe: every route now reports scrollWidth equal to the viewport.
+- The verify form and its pact list overlapped the sticky header on narrow
+  screens. The form now stacks and the list comes first.
+- Added scroll-padding-top so anchors and scrolled targets clear the header.
+
+Verification:
+- The live verifier now retries transport failures only, never a failing
+  assertion, and gained checks for the malformed-payload and patch-validation
+  paths. 79 checks, all passing against production.
+- Playwright: 7 journeys on desktop and 7 on mobile, all passing against the
+  production alias.
+- Added .vercelignore so 254 MB of build output and 27 MB of test artifacts
+  never enter a deployment payload, and a screenshot capture script.
+- Note for future deploys: `vercel --prod` reused a stale build twice here.
+  `--force` was required to get the current source live.

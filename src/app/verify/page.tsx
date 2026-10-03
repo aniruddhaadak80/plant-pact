@@ -36,9 +36,10 @@ export default async function VerifyPage() {
         }))}
       />
       <p className="mt-8 max-w-3xl text-xs leading-relaxed text-loam-faint">
-        Genesis value <span className="num">{GENESIS_SEAL}</span>. A chain with no events is
-        reported as broken rather than vacuously valid, so an empty audit trail can never be
-        mistaken for a verified one.
+        Genesis value{" "}
+        <span className="num break-all text-loam-soft">{GENESIS_SEAL}</span>. A chain with no
+        events is reported as broken rather than vacuously valid, so an empty audit trail can
+        never be mistaken for a verified one.
       </p>
     </div>
   );

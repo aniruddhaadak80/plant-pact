@@ -46,3 +46,13 @@ next-env.d.ts
 # local embedded database directories
 /.pglite/
 /.pglite-*/
+# local developer helper scripts
+.vc-*
+
+# Vercel/Vendor agent tooling installed automatically by marketplace
+# integrations. Not part of this application.
+/.agents/
+/skills-lock.json
+
+.vercel
+.env*

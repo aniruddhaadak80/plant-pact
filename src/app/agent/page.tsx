@@ -116,7 +116,7 @@ export default function AgentPage() {
         </aside>
       </div>
 
-      <AgentConsole />
+      <AgentConsole origin={siteOrigin()} />
     </div>
   );
 }

@@ -57,10 +57,16 @@ test.describe("Plant Pact primary journey", () => {
     await page.goto("/");
 
     // The landing page must carry a real repository link, not a placeholder.
-    await expect(page.locator('[data-testid="github-link"]').first()).toBeVisible();
-    await expect(
-      page.locator('[data-testid="github-link"]').first().getAttribute("href"),
-    ).resolves.toContain("github.com/aniruddhaadak80/plant-pact");
+    // On mobile the desktop header link is hidden by CSS, so assert on a link
+    // the visitor can actually see.
+    const repoLink = page
+      .locator('[data-testid="github-link"]')
+      .filter({ visible: true })
+      .first();
+    await expect(repoLink).toBeVisible();
+    await expect(repoLink.getAttribute("href")).resolves.toContain(
+      "github.com/aniruddhaadak80/plant-pact",
+    );
 
     await page.getByRole("link", { name: "Place a plant", exact: true }).first().click();
     await expect(page).toHaveURL(/\/advisor$/);
@@ -93,7 +99,10 @@ test.describe("Plant Pact primary journey", () => {
     // The signature interaction: dragging the sill rail re-scores the placement.
     await setRange(page, "window-hours", "9");
     await expect
-      .poll(async () => Number(await dial.getAttribute("data-probability")), { timeout: 20000 })
+      .poll(async () => Number(await dial.getAttribute("data-probability")), {
+        timeout: 45000,
+        intervals: [500, 1000, 1500],
+      })
       .not.toBe(Number(probability));
 
     // The breaking point must be a real date or an explicit honest absence.
@@ -116,7 +125,8 @@ test.describe("Plant Pact primary journey", () => {
     await expect(page.locator('[data-testid="advisor-verdict"]')).toBeVisible({ timeout: 30000 });
 
     await page.getByRole("button", { name: /commit this pact/i }).click();
-    await expect(page).toHaveURL(/\/pacts\/[0-9a-f-]{36}/, { timeout: 30000 });
+    // Generous: a cold serverless function can take longer than the default.
+    await expect(page).toHaveURL(/\/pacts\/[0-9a-f-]{36}/, { timeout: 60000 });
     await expect(page.locator('[data-testid="commit-confirmation"]')).toBeVisible();
 
     // Persisted read-back through the UI, with the seal chain rendered.
@@ -132,10 +142,14 @@ test.describe("Plant Pact primary journey", () => {
     await expect(page.locator('[data-testid="action-message"]')).toContainText(/re-scored/i, {
       timeout: 30000,
     });
-    const afterProbability = await page
-      .locator('[data-testid="verdict-dial"]')
-      .getAttribute("data-probability");
-    expect(afterProbability).not.toBe(beforeProbability);
+    // router.refresh() re-renders the server component that computes the verdict,
+    // so the new number arrives asynchronously after the PATCH resolves.
+    await expect
+      .poll(async () => Number(await page.locator('[data-testid="verdict-dial"]').getAttribute("data-probability")), {
+        timeout: 45000,
+        intervals: [500, 1000, 1500],
+      })
+      .not.toBe(Number(beforeProbability));
 
     // The takeaway artifact actually downloads valid Markdown.
     const download = await Promise.all([
@@ -163,7 +177,7 @@ test.describe("Plant Pact primary journey", () => {
     await page.fill("#plant-label", `journey-${UNIQUE}`);
     await page.fill("#friend", "Grace");
     await page.getByRole("button", { name: /commit this pact/i }).click();
-    await expect(page).toHaveURL(/\/pacts\/[0-9a-f-]{36}/, { timeout: 30000 });
+    await expect(page).toHaveURL(/\/pacts\/[0-9a-f-]{36}/, { timeout: 60000 });
 
     // Closing the loop freezes the placement, which is the point.
     await page.selectOption("#outcome", "struggled");
@@ -176,6 +190,7 @@ test.describe("Plant Pact primary journey", () => {
     await page.goto("/verify");
     const card = page.locator(`button:has-text("journey-${UNIQUE}")`);
     await expect(card).toBeVisible();
+    await card.scrollIntoViewIfNeeded();
     await card.click();
     await page.getByRole("button", { name: "Verify", exact: true }).click();
     await expect(page.locator('[data-testid="verify-report"]')).toHaveAttribute("data-ok", "true");
@@ -195,11 +210,13 @@ test.describe("Plant Pact primary journey", () => {
     await page.goto("/agent");
 
     await page.locator('[data-testid="preset-tools-list"]').click();
-    await expect(page.locator('[data-testid="agent-response"]')).toContainText("tools/list", {
+    await expect(page.locator('[data-testid="agent-request"]')).toContainText("tools/list");
+    await expect(page.locator('[data-testid="agent-response"]')).toContainText("score_placement", {
       timeout: 30000,
     });
     await expect(page.locator('[data-testid="agent-response"]')).toContainText("commit_pact");
     await expect(page.locator('[data-testid="agent-response"]')).toContainText("verify_integrity");
+    await expect(page.locator('[data-testid="agent-response"]')).toContainText("inputSchema");
 
     await page.locator('[data-testid="preset-score"]').click();
     await expect(page.locator('[data-testid="agent-response"]')).toContainText("probability", {
@@ -239,11 +256,13 @@ test.describe("Plant Pact primary journey", () => {
     ).toBe("https://github.com/aniruddhaadak80/plant-pact");
 
     if (isMobile) {
-      // The desktop nav is hidden at this width, so the disclosure must carry it.
+      // The desktop link is hidden by CSS but still in the DOM, so target the
+      // one the visitor can actually see after opening the disclosure.
       await page.getByText("Menu", { exact: true }).click();
-      await expect(
-        page.locator('header a[href="https://github.com/aniruddhaadak80/plant-pact"]'),
-      ).toBeVisible();
+      const visibleRepoLink = page
+        .locator('header a[href="https://github.com/aniruddhaadak80/plant-pact"]')
+        .filter({ visible: true });
+      await expect(visibleRepoLink.first()).toBeVisible();
     }
 
     expect(log.errors, `console errors: ${log.errors.join(" | ")}`).toHaveLength(0);

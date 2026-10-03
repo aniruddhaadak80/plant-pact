@@ -1,0 +1,28 @@
+# Build output and local state must never reach the deployment payload.
+node_modules
+.next
+.vercel
+out
+build
+
+# Playwright artifacts, traces and screenshots
+test-results
+playwright-report
+.playwright
+blob-report
+
+# Embedded local database directories
+.pglite
+.pglite-*
+*.tsbuildinfo
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.env.local
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.log

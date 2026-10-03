@@ -52,6 +52,13 @@ inside the serverless function and its weights are in the repository.
 
 <sub>Live capture of `/advisor`. Real forecast, real inference, real failure state.</sub>
 
+<details>
+<summary>Same product on a phone</summary>
+
+<img src="docs/screenshot-mobile.png" alt="The advisor on a 390px phone: the sill rails stack above the survival odds and the factor ledger" width="320" />
+
+</details>
+
 ---
 
 ## 🏗️ Architecture

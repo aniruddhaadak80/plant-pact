@@ -265,7 +265,7 @@ export function AdvisorWorkbench({ species, cities, defaultCityIndex }: Props) {
     <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
       {/* ---------------- inputs ---------------- */}
       <form
-        className="space-y-5"
+        className="min-w-0 space-y-5"
         onSubmit={(event) => {
           event.preventDefault();
           void commit();
@@ -508,7 +508,7 @@ export function AdvisorWorkbench({ species, cities, defaultCityIndex }: Props) {
       </form>
 
       {/* ---------------- live verdict ---------------- */}
-      <div className="lg:sticky lg:top-20 lg:self-start">
+      <div className="min-w-0 lg:sticky lg:top-20 lg:self-start">
         {status === "error" && error ? (
           <ErrorState
             title="The placement could not be scored"

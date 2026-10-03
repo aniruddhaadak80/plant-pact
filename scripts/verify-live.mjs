@@ -50,7 +50,7 @@ function rememberCookies(response) {
   cookieHeader = [...jar.entries()].map(([k, v]) => `${k}=${v}`).join("; ");
 }
 
-async function call(path, options = {}) {
+async function callOnce(path, options = {}) {
   const headers = { ...(options.headers ?? {}) };
   if (options.body !== undefined && !headers["content-type"]) {
     headers["content-type"] = "application/json";
@@ -58,7 +58,11 @@ async function call(path, options = {}) {
   if (cookieHeader) headers.cookie = cookieHeader;
   // `rawBody` sends bytes verbatim, which is how a deliberately malformed payload
   // is tested. `body` is serialised normally.
-  const payload = options.rawBody !== undefined ? options.rawBody : options.body === undefined ? undefined : JSON.stringify(options.body);
+  const payload = options.rawBody !== undefined
+    ? options.rawBody
+    : options.body === undefined
+      ? undefined
+      : JSON.stringify(options.body);
   const response = await fetch(`${BASE}${path}`, {
     ...options,
     headers,
@@ -74,6 +78,25 @@ async function call(path, options = {}) {
     json = undefined;
   }
   return { status: response.status, text, json, headers: response.headers };
+}
+
+/**
+ * Transport-level retries only. A verifier that silently retried a failing
+ * assertion would be worthless, so a 4xx or 5xx is returned immediately and
+ * only genuine socket/TLS failures are retried.
+ */
+async function call(path, options = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      return await callOnce(path, options);
+    } catch (error) {
+      lastError = error;
+      if (attempt === 3) break;
+      await new Promise((resolve) => setTimeout(resolve, 800 * attempt));
+    }
+  }
+  throw lastError;
 }
 
 function section(title) {

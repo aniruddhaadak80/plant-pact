@@ -49,7 +49,9 @@ export function VerifyPanel({ recent }: { recent: { id: string; label: string }[
 
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
-      <div className="space-y-4">
+      {/* min-w-0 lets the inner overflow-x-auto containers shrink instead of
+          forcing the whole page wider than a phone viewport. */}
+      <div className="min-w-0 space-y-4">
         <form
           className="tag p-4"
           onSubmit={(event) => {
@@ -58,8 +60,8 @@ export function VerifyPanel({ recent }: { recent: { id: string; label: string }[
           }}
         >
           <p className="label-mono">Replay a chain</p>
-          <div className="mt-3 flex flex-wrap items-end gap-3">
-            <div className="min-w-[16rem] flex-1">
+          <div className="mt-3 grid gap-3 sm:flex sm:flex-wrap sm:items-end">
+            <div className="sm:min-w-[16rem] sm:flex-1">
               <Field label="Pact id" htmlFor="pact-id">
                 <input
                   id="pact-id"
@@ -153,7 +155,7 @@ export function VerifyPanel({ recent }: { recent: { id: string; label: string }[
         </section>
       </div>
 
-      <aside className="tag h-fit p-4">
+      <aside className="tag order-first min-w-0 h-fit p-4 lg:order-last">
         <p className="label-mono">Your pacts</p>
         {recent.length === 0 ? (
           <p className="mt-2 text-sm leading-relaxed text-loam-soft">

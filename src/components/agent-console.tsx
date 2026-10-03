@@ -128,7 +128,13 @@ function getPreset(id: string): Preset {
   return [INITIALIZE, TOOLS_LIST, SCORE, COMMIT, LIST].find((p) => p.id === id) ?? INITIALIZE;
 }
 
-export function AgentConsole() {
+/**
+ * `origin` is resolved on the server and passed in, because this component runs
+ * in the browser where the deployment's environment variables do not exist.
+ * Computing it client-side would render localhost during hydration and trip
+ * React's text-mismatch check.
+ */
+export function AgentConsole({ origin }: { origin: string }) {
   const [selected, setSelected] = useState("initialize");
   const [busy, setBusy] = useState(false);
   const [request, setRequest] = useState<string>("");
@@ -331,7 +337,7 @@ export function AgentConsole() {
           agent and a browser tab share ownership rather than inventing a parallel world.
         </p>
         <pre className="num mt-3 overflow-x-auto rounded-[3px] border border-edge bg-shell px-3 py-2 text-[11px] leading-relaxed">
-{`curl -s ${typeof window === "undefined" ? "" : window.location.origin}/api/mcp \\
+{`curl -s ${origin}/api/mcp \\
   -H 'content-type: application/json' \\
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'`}
         </pre>

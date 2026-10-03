@@ -32,11 +32,14 @@ export function SiteFooter(): React.ReactNode {
                 </li>
               ))}
               <li>
+                {/* Not /api/mcp directly: that endpoint speaks JSON-RPC over POST
+                    only, and Next.js would prefetch this link as a GET and log a
+                    405. The console documents the endpoint. */}
                 <Link
-                  href="/api/mcp"
+                  href="/agent"
                   className="text-sm text-loam-soft no-underline underline decoration-edge underline-offset-4 hover:text-clay"
                 >
-                  Agent endpoint
+                  Agent console
                 </Link>
               </li>
             </ul>

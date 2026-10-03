@@ -52,6 +52,13 @@
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    /* Keep anchored elements and programmatically scrolled targets clear of the
+       sticky header. */
+    scroll-padding-top: 5rem;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -109,6 +116,13 @@
   .num {
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
+    /* Long unbroken tokens - UUIDs, 96-character seals, URLs - must wrap rather
+       than force the page wider than a phone viewport. */
+    overflow-wrap: anywhere;
+  }
+
+  a {
+    overflow-wrap: anywhere;
   }
 
   /* The dawn-to-dusk sky band. One per page, full bleed. */
