@@ -59,7 +59,10 @@ jobs:
       - uses: actions/checkout@v5
       - name: Fail on committed credentials or env files
         run: |
-          if git ls-files | grep -E '\.env($|\.)' ; then
+          # `.env.example` and friends are templates and are meant to be
+          # tracked, so exclude them. `\.env($|\.)` also matches
+          # `.env.example`, which made this job fail on every run of main.
+          if git ls-files | grep -E '\.env($|\.)' | grep -Ev '\.env\.(example|sample|template)$' ; then
             echo "An environment file is tracked. Remove it." && exit 1
           fi
           if git ls-files | grep -Ei '(id_rsa|\.pem$|credentials\.json|\.npmrc)$' ; then
