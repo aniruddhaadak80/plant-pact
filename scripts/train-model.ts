@@ -23,7 +23,7 @@
  *
  * Run with:  npm run train
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CATALOGUE } from "../src/lib/species.ts";
@@ -357,7 +357,21 @@ ${FEATURE_KEYS.map((k) => `      "${k}",`).join("\n")}
 } as const;
 `;
 
-writeFileSync(weightsPath, file, "utf8");
+/**
+ * Only rewrite the file when something other than the timestamp changed.
+ *
+ * The CI guard refits the model and fails on any diff, which is the point: it
+ * stops the README and the model card from claiming metrics the shipped weights
+ * do not achieve. But `trainedAt` changes on every run by definition, so
+ * writing unconditionally would make that guard permanently red and train
+ * everyone to ignore it - the worst way for a guard to behave. Provenance is
+ * preserved for a real refit and left untouched for a no-op one.
+ */
+const existing = existsSync(weightsPath) ? readFileSync(weightsPath, "utf8") : null;
+const stripTimestamp = (text: string): string => text.replace(/^\s*trainedAt:.*$/m, "");
+const weightsChanged = existing === null || stripTimestamp(existing) !== stripTimestamp(file);
+
+if (weightsChanged) writeFileSync(weightsPath, file, "utf8");
 
 console.log(`rows=${rows.length} train=${train.length} holdout=${holdout.length}`);
 console.log(
@@ -371,4 +385,8 @@ for (let i = 0; i < D; i += 1) console.log(`  w(${FEATURE_KEYS[i]}) = ${shippedW
 console.log(
   `holdout AUC=${holdoutAuc.toFixed(4)} accuracy=${holdoutAccuracy.toFixed(4)} logLoss=${holdoutLogLoss.toFixed(4)} brier=${holdoutBrier.toFixed(4)}`,
 );
-console.log(`wrote ${weightsPath}`);
+console.log(
+  weightsChanged
+    ? `wrote ${weightsPath} (weights changed)`
+    : `weights unchanged apart from the timestamp; ${weightsPath} left as committed`,
+);

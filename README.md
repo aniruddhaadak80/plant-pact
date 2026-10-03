@@ -236,13 +236,16 @@ flowchart LR
 | --- | --- |
 | Corpus | 8,040 placements across 24 cities, real Open-Meteo forecasts + ERA5 normals |
 | Train / holdout | 6,432 / 1,608 |
+| Labels | 4,690 survived · 3,350 failed |
 | Held-out AUC | 0.956 |
 | Held-out accuracy | 0.889 |
-| Base survival rate | 28.5% |
+| Held-out log loss / Brier | 0.459 / 0.141 |
+| Base survival rate | 58.3% |
 
 The base survival rate is the share of *randomly sampled* placements that the
-labelling procedure calls a survivor. It is the honest floor for a gift, and a
-good placement should read well above it. Regenerate everything with
+labelling procedure calls a survivor — a random species, a random window and a
+random watering routine, in real weather. It is the honest reference point for a
+gift: a well-placed plant should read clearly above it, and a bad one well below. Regenerate everything with
 `npm run train`; refresh the weather corpus with `npm run corpus`. CI fails if
 the committed weights drift from a fresh fit.
 

@@ -149,9 +149,10 @@ export default function LandingPage() {
         <p className="mt-3 max-w-3xl text-xs leading-relaxed text-loam-faint">
           The base survival rate is the share of randomly sampled placements — random
           species, random window, random routine, real weather — that the labelling
-          procedure calls a survivor. It is the honest floor for a gift, and a good
-          placement should read well above it. All four figures come from the committed
-          model card and can be regenerated with <span className="num">npm run train</span>.
+          procedure calls a survivor. It is the honest reference point for a gift: a
+          well-placed plant should read clearly above it, and a bad one well below. All
+          four figures come from the committed model card and can be regenerated with{" "}
+          <span className="num">npm run train</span>.
         </p>
       </section>
 

@@ -28,7 +28,7 @@ export const WEIGHTS = {
   card: {
     version: "pact-survival@2026.10.0",
     family: "logistic regression (L2, batch gradient descent)",
-    trainedAt: "2026-10-02T10:40:07.244Z",
+    trainedAt: "2026-10-03T02:36:08.554Z",
     seed: 20261002,
     features: [
       "lightDeficit",
